@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="h-[var(--header-height)] flex items-center justify-between px-6 border-b border-[var(--border-default)] bg-[var(--bg-secondary)]/60 backdrop-blur-xl flex-shrink-0 shadow-[var(--shadow-sm)]">
+    <header className="relative z-40 h-[var(--header-height)] flex items-center justify-between px-6 border-b border-[var(--border-default)] bg-[var(--bg-secondary)]/60 backdrop-blur-xl flex-shrink-0 shadow-[var(--shadow-sm)]">
       <div className="flex items-center gap-2.5">
         <h2 className="text-sm font-semibold tracking-tight bg-gradient-to-r from-[var(--text-primary)] to-[var(--text-secondary)] bg-clip-text text-transparent">Todo</h2>
       </div>

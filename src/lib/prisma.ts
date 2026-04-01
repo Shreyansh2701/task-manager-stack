@@ -11,7 +11,7 @@ if (!connectionString) {
   throw new Error("DATABASE_URL is required");
 }
 
-const adapter = globalForPrisma.prismaAdapter ?? new PrismaPg({ connectionString });
+const adapter = globalForPrisma.prismaAdapter ?? new PrismaPg({ connectionString, ssl: { rejectUnauthorized: false } });
 export const prisma = globalForPrisma.prisma ?? new PrismaClient({ adapter });
 
 if (process.env.NODE_ENV !== "production") {
